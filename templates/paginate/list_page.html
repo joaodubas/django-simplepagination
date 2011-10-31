@@ -1,0 +1,35 @@
+{% spaceless %}
+    <div class="paginate-container">
+        <div class="paginate-holder">
+            {% if prev_page %}
+                <a class="page previous" href="{{ prev_page.link }}">&lt; Anterior</a>
+            {% endif %}
+            
+            {% if show_left_tail %}
+                {% for page in range_left_tail %}
+                    <a class="page number" href="{{ page.link }}">{{ page.number }}</a>
+                {% endfor %}
+                &hellip;
+            {% endif %}
+            {% for page in range_pages %}
+                {% ifequal page.number page_.number %}
+                    <span class="page number current">{{ page.number }}</span>
+                {% else %}
+                    <a class="page number" href="{{ page.link }}">{{ page.number }}</a>
+                {% endifequal %}
+            {% endfor %}
+
+
+            {% if show_right_tail %}
+                &hellip;
+                {% for page in range_right_tail %}
+                    <a class="page number" href="{{ page.link }}">{{ page.number }}</a>
+                {% endfor %}
+            {% endif %}
+            
+            {% if next_page %}
+                <a class="page next" href="{{ next_page.link }}">Próximo &gt;</a>
+            {% endif %}
+        </div>
+    </div>
+{% endspaceless %}

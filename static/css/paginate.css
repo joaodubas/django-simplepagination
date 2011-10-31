@@ -1,0 +1,24 @@
+.paginate-container {
+    border-top: 2px solid #a19d92;
+    margin: 10px 0 0 0; padding: 10px 0 0 0;
+}
+    .paginate-holder { text-align: center; }
+        .page {
+            line-height: 1;
+            display: inline-block;
+            padding: 5px;
+        }
+        .page:link, .page:visited,
+        .page:hover, .page:active {
+            color: #fff;
+            text-decoration: none;
+        }
+        .number { margin: 0 2px; }
+        .number:hover, .number:active, .current {
+            border: 1px solid #a19d92;
+            padding: 4px;
+        }
+        .previous:hover, .previous:active,
+        .next:hover, .next:active {
+            text-decoration: underline;
+        }

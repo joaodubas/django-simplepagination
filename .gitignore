@@ -1,0 +1,8 @@
+# FILES
+*.pyc
+*.swp
+._*
+
+# DIRS
+.DS_*
+
